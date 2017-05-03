@@ -1,13 +1,9 @@
 var x = document.getElementById("myText").value;
 var TTT = 0;
+var so = 0;
 var tud;
 var Casa = "anda";
 var y = "";
-var kul = document.getElementById('UUU');
-var nip = 0;
-function contador() {
-	kul.innerText = nip;
-}
 function num1(num, num3){
 	var TTT = TTT + 1;
 	var UUU = 25;
@@ -18,11 +14,7 @@ function num1(num, num3){
 	if (TTT === 3) {
 		return 0;
 		TTT = 0;
-	}/*////////////
-
-	Desde Aqui
-
-	/////////////*/
+	}
 	var hol2 = Math.floor((Math.random() * 100) + 1);
 	while (hol1 == true){
 		if (hol2 < UUU && hol2 > CCC){
@@ -30,18 +22,11 @@ function num1(num, num3){
 			return hol2;
 			break;
 		}else{
-			setInterval(function kiub(){ 
-				hol2 = Math.floor((Math.random() * 100) + 1);
-			}, 1);
-			nip = nip + 1;
-			contador()
+			so++;
+			hol2 = Math.floor((Math.random() * 100) + 1);
 		}
 	}
-}/*///////////////
-
-Hata Aqui
-
-//////////////////*/
+}
 function GGG(letra){
 	var Hola = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 	var ty = true;
@@ -133,8 +118,7 @@ function puet(){
 		y = y  + GGG(x.charAt(i));
 		i++;
 	}
-	alert(y + ' ');
-	contador();
+	alert(y + ' ' +so);
 	y = '';
-	nip = 0;
+	so = 0;
 }
